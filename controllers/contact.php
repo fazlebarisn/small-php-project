@@ -2,6 +2,5 @@
 
 $heading = 'Contuct Us';
 
-// require "views/contact.view.php";
-
-require("views/contact.view.php"); 
+$root = $_SERVER['DOCUMENT_ROOT'];
+include $root ."/small-php-project/views/contact.view.php";
