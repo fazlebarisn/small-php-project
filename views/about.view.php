@@ -1,8 +1,8 @@
 <?php
-    $root = $_SERVER['DOCUMENT_ROOT'];
-    include $root ."/small-php-project/views/partials/head.php";
-    include $root ."/small-php-project/views/partials/nav.php";
-    include $root ."/small-php-project/views/partials/banner.php";
+
+    require("views/partials/head.php"); 
+    require("views/partials/nav.php"); 
+    require("views/partials/banner.php"); 
     
 ?>
 
@@ -12,4 +12,4 @@
     </div>
   </main>
 
-<?php include $root ."/small-php-project/views/partials/footer.php"; ?>
+<?php require("views/partials/footer.php");  ?>

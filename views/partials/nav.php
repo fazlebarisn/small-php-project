@@ -17,9 +17,7 @@ function urlIs($value){
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
-
-            <!-- <a href="index.php" class="<?= 'kk' ?> bg-gray-900 text-white text-gray-300 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a> -->
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              
               <a href="index.php" class="<?= urlIs('/small-php-project/controllers/about.php') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
 
               <a href="about.php" class="<?= $_SERVER['REQUEST_URI']==='/small-php-project/about.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium">About</a>
