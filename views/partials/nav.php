@@ -1,13 +1,4 @@
-<?php
-// echo '<pre>';
-// var_dump($_SERVER['REQUEST_URI']);
-// echo '<pre>';
 
-function urlIs($value){
-  return $_SERVER['REQUEST_URI'] === $value;
-}
-
-?>
 <nav class="bg-gray-800">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
@@ -18,11 +9,11 @@ function urlIs($value){
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               
-              <a href="index.php" class="<?= urlIs('/small-php-project/controllers/about.php') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
+              <a href="index.php" class="<?= urlIs('/small-php-project/index.php') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
 
-              <a href="about.php" class="<?= $_SERVER['REQUEST_URI']==='/small-php-project/about.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium">About</a>
+              <a href="about.php" class="<?= urlIs('/small-php-project/about.php') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium">About</a>
 
-              <a href="contact.php" class="<?= $_SERVER['REQUEST_URI']==='/small-php-project/contact.php' ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium">Contuct Us</a>
+              <a href="contact.php" class="<?= urlIs('/small-php-project/contact.php') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> px-3 py-2 rounded-md text-sm font-medium">Contuct Us</a>
 
             </div>
           </div>
@@ -123,3 +114,4 @@ function urlIs($value){
       </div>
     </div>
   </nav>
+
