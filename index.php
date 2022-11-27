@@ -7,7 +7,10 @@ $heading = 'Home';
 
 // require("views/index.view.php"); 
 
-$id = $_GET['id'];
+// $id = $_GET['id'];
+
+$id = $_GET['id'] ?? 1;
+
 $query = "select * from posts where id=:id";
 
 $db = new Database($config['database']);
