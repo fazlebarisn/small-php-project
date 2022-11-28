@@ -1,6 +1,6 @@
 <?php
 require("functions.php"); 
 
-$heading = 'About Us';
+$heading = 'Note Details';
 
-require("views/about.view.php"); 
+// require("views/about.view.php"); 

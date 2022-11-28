@@ -11,7 +11,8 @@ $heading = 'My Notes';
 
  $db = new Database($config['database']);
 // $posts = $db->query($query, [':id'=>$id] )->fetchAll();
-
-$notes = $db->query("select * from notes where user_id=1")->fetchAll();
+$id = $_GET['id'];
+// dd($id);
+$notes = $db->query("select * from notes where user_id=:id", ['id'=>$id])->fetchAll();
 
 require("views/notes.view.php"); 
