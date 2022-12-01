@@ -3,9 +3,8 @@ require("functions.php");
 
 $heading = 'Home';
 
-// dd($_SERVER['REQUEST_URI']);
-
-require("views/index.view.php"); 
-
-// $id = $_GET['id'];
-
+if('/small-php-project/' == $url || '/small-php-project/index.php' == $url ){
+    require("views/index.view.php"); 
+}else{
+    abort();
+}
