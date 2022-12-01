@@ -4,15 +4,8 @@ require "Database.php";
 $config = require "config.php";
 
 $heading = 'My Notes';
+$db = new Database($config['database']);
 
-// $id = $_GET['id'] ?? 1;
+$note = $db->query("select * from notes where id=:id", ['id'=>$_GET['id'] ])->fetch();
 
-// $query = "select * from posts where id=:id";
-
- $db = new Database($config['database']);
-// $posts = $db->query($query, [':id'=>$id] )->fetchAll();
-$id = $_GET['id'];
-// dd($id);
-$notes = $db->query("select * from notes where user_id=:id", ['id'=>$id])->fetchAll();
-
-require("views/notes.view.php"); 
+require("views/note.view.php"); 

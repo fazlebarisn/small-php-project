@@ -6,7 +6,7 @@ $config = require "config.php";
 $heading = 'My Notes';
 
 // $id = $_GET['id'] ?? 1;
-
+// dd( $_GET['id'] );
 // $query = "select * from posts where id=:id";
 
  $db = new Database($config['database']);
