@@ -6,7 +6,10 @@
 
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-       <li><?= $note['body'] ?></li>
+        <p class="mb-5">
+            <a href="notes.php" class="text-blue-500 underline">Go Back....</a>
+        </p>
+       <p><?= $note['body'] ?></p>
     </div>
   </main>
 

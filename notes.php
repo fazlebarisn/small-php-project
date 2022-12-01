@@ -5,12 +5,7 @@ $config = require "config.php";
 
 $heading = 'My Notes';
 
-// $id = $_GET['id'] ?? 1;
-// dd( $_GET['id'] );
-// $query = "select * from posts where id=:id";
-
- $db = new Database($config['database']);
-// $posts = $db->query($query, [':id'=>$id] )->fetchAll();
+$db = new Database($config['database']);
 
 $notes = $db->query("select * from notes where user_id=1")->fetchAll();
 
